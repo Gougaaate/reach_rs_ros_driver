@@ -52,7 +52,7 @@ class ReachRsDriver(object):
         self.socket = None
 
         host = rospy.get_param('~reach_rs_host_or_ip', 'reach.local')
-        port = rospy.get_param('~reach_rs_port')
+        port = rospy.get_param('~reach_rs_port', '/dev/ttyACM0')
         self.address = (host, port)
 
 
